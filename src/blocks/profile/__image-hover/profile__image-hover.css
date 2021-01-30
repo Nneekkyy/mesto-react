@@ -1,0 +1,12 @@
+.profile__image-hover {
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  margin-left: 50px;
+  opacity: 1;
+  z-index: 2;
+}
+.profile__image-hover:hover {
+  cursor: pointer;
+}
