@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Barrrsss/mesto-react.git/static/css/main.b56b6882.chunk.css",
+    "main.js": "/Barrrsss/mesto-react.git/static/js/main.32275c2a.chunk.js",
+    "main.js.map": "/Barrrsss/mesto-react.git/static/js/main.32275c2a.chunk.js.map",
+    "runtime-main.js": "/Barrrsss/mesto-react.git/static/js/runtime-main.a35d07be.js",
+    "runtime-main.js.map": "/Barrrsss/mesto-react.git/static/js/runtime-main.a35d07be.js.map",
+    "static/js/2.3678423a.chunk.js": "/Barrrsss/mesto-react.git/static/js/2.3678423a.chunk.js",
+    "static/js/2.3678423a.chunk.js.map": "/Barrrsss/mesto-react.git/static/js/2.3678423a.chunk.js.map",
+    "static/js/3.deff9e5c.chunk.js": "/Barrrsss/mesto-react.git/static/js/3.deff9e5c.chunk.js",
+    "static/js/3.deff9e5c.chunk.js.map": "/Barrrsss/mesto-react.git/static/js/3.deff9e5c.chunk.js.map",
+    "index.html": "/Barrrsss/mesto-react.git/index.html",
+    "static/css/main.b56b6882.chunk.css.map": "/Barrrsss/mesto-react.git/static/css/main.b56b6882.chunk.css.map",
+    "static/js/2.3678423a.chunk.js.LICENSE.txt": "/Barrrsss/mesto-react.git/static/js/2.3678423a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Barrrsss/mesto-react.git/static/media/trash-icon.2af49b82.svg",
+    "static/media/header-logo.c2821b38.svg": "/Barrrsss/mesto-react.git/static/media/header-logo.c2821b38.svg",
+    "static/media/update-avatar.ae1a976d.svg": "/Barrrsss/mesto-react.git/static/media/update-avatar.ae1a976d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a35d07be.js",
+    "static/js/2.3678423a.chunk.js",
+    "static/css/main.b56b6882.chunk.css",
+    "static/js/main.32275c2a.chunk.js"
+  ]
+}
