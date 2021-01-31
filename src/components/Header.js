@@ -1,10 +1,11 @@
-import MestoLogo from "../images/header-logo.svg";
+import mestoLogo from "../images/header-logo.svg";
 
-function Header () {
+function Header() {
     return (
         <header className="header">
-            <img className="header__logo" src={MestoLogo} alt="Логотип место" />
+            <img className="header__logo" src={mestoLogo} alt="Логотип место"/>
         </header>
     );
 }
+
 export default Header

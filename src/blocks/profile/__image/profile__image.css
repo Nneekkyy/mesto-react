@@ -5,7 +5,7 @@
   height: 120px;
   background-position: center;
   background-size: contain;
-  z-index: 3;
+  z-index: 1;
 }
 
 .profile__image:hover {

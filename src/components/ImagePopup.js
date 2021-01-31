@@ -1,6 +1,13 @@
-// function ImagePopup () {
-//     return (
-//
-//     );
-// };
-// export default ImagePopup
+function ImagePopup(props) {
+
+    return (
+        <div className={props.card ? `popup popup_image popup_opened` : `popup popup_image`}>
+            <div className="popup__container">
+                <button className="popup__close popup__close_image" type="button" onClick={props.onClose}></button>
+                <img className="popup__image-full" src={props.card.link} alt="Фотография"/>
+                <p className="popup__image-sign">{props.card.name}</p>
+            </div>
+        </div>
+    );
+}
+export default ImagePopup

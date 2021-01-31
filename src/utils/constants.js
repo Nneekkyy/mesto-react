@@ -16,8 +16,8 @@ export const ESC_KEYCODE = 27;
 const options = {
     url: 'https://mesto.nomoreparties.co/v1/cohort-19/',
     headers: {
-      authorization: '34fdcd7c-5eb8-4424-b9a2-100499773e16',
-      'Content-Type': 'application/json',
-  }
+        authorization: '34fdcd7c-5eb8-4424-b9a2-100499773e16',
+        'Content-Type': 'application/json',
+    }
 }
 export default options;
