@@ -32,11 +32,11 @@ function Main(props) {
                     <img className="profile__image-hover" src={pencil} alt="Карандаш"/>
                     <div className="profile__info">
                         <h1 className="profile__name">{userName}</h1>
-                        <button className="profile__edit" type="button" onClick={props.onEditProfile}></button>
+                        <button className="profile__edit" type="button" onClick={props.onEditProfile} />
                         <h2 className="profile__title">{userDescription}</h2>
                     </div>
                 </div>
-                <button className="profile__add" type="button" onClick={props.onAddPlace}></button>
+                <button className="profile__add" type="button" onClick={props.onAddPlace} />
             </section>
             <section className="elements">
                 <ul className="elements__list">
