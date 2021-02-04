@@ -1,18 +1,32 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 import PopupWithForm from './PopupWithForm'
 import ImagePopup from './ImagePopup'
+import ESC_KEYCODE from '../utils/keycode'
+import api from "../utils/Api";
 
 
 function App() {
+    const [currentUser, setCurrentUser] = useState('');
 
+    useEffect(() => {
+        api.getAllData()
+            .then((response => {
+                const [userData] = response;
+                setCurrentUser(userData);
+            }))
+            .catch((err) => {
+                console.log(err);
+            })
+    }, [])
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
 
     function handleEditProfileClick() {
         setIsEditProfilePopupOpen(!isEditProfilePopupOpen);
+        console.log(currentUser)
     }
 
     const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
@@ -39,14 +53,18 @@ function App() {
         setIsEditAvatarPopupOpen(false);
         setSelectedCard(false);
     }
-
+    function onKeyPressed(e) {
+        if (e.keyCode === ESC_KEYCODE) {
+            closeAllPopups();
+        }
+    }
     return (
 
-        <div className="body">
-            <div className="page">
+        <div tabIndex="0" className="body" onKeyDown={onKeyPressed}>
+            <div className="page" >
                 <Header/>
                 <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick}
-                      onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}/>
+                      onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick} />
 
                 <Footer/>
 
