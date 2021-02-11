@@ -75,6 +75,15 @@ function App() {
             setCards(newCards);
         });
     }
+    function handleCardDelete(item) {
+
+        api.deleteCard(item._id).then(() => {
+            // Формируем новый массив на основе имеющегося, подставляя в него новую карточку
+            const newCards = cards.filter((c) => c._id !== item._id);
+            // Обновляем стейт
+            setCards(newCards);
+        });
+    }
     return (
         <UserContext.Provider value={currentUser}>
             <div className="body" onKeyDown={onKeyPressed} tabIndex="0" >
@@ -82,7 +91,7 @@ function App() {
                     <Header/>
                     <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick}
                           onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}
-                          cards={cards} onCardLike={handleCardLike} />
+                          cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} />
 
                     <Footer/>
 
