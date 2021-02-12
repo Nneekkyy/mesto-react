@@ -8,6 +8,8 @@ import ImagePopup from './ImagePopup'
 import ESC_KEYCODE from '../utils/keycode'
 import api from "../utils/Api";
 import {UserContext} from '../contexts/CurrentUserContext'
+import EditProfilePopup from './EditProfilePopup'
+
 
 function App() {
     const [currentUser, setCurrentUser] = useState({
@@ -75,6 +77,16 @@ function App() {
             setCards(newCards);
         });
     }
+    function handleUpdateUser(formData) {
+        api.saveEditedInfo(formData)
+            .then((data) => {
+                setCurrentUser(data);
+                closeAllPopups();
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
     function handleCardDelete(item) {
 
         api.deleteCard(item._id).then(() => {
@@ -95,17 +107,7 @@ function App() {
 
                     <Footer/>
 
-                    <PopupWithForm id='popupEdit' title='Редактировать профиль' name='edit-profile'
-                                   isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
-                        <input id="nameField" className="popup__field popup__field_name" type="text" name="name"
-                               placeholder="Имя"
-                               minLength="2" maxLength="40" required/>
-                        <span id='nameField-error'></span>
-                        <input id="titleField" className="popup__field popup__field_title" type="text" name="about"
-                               placeholder="О себе"
-                               minLength="2" maxLength="200" required/>
-                        <span id='titleField-error'></span>
-                    </PopupWithForm>
+                    <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} updateEditProfile={handleUpdateUser}/>
                     <PopupWithForm id="popupAdd" title='Новое место' name='add-card' isOpen={isAddPlacePopupOpen}
                                    onClose={closeAllPopups}>
                         <input id="placeField" className="popup__field popup__field_add-card popup__field_place" type="text"
