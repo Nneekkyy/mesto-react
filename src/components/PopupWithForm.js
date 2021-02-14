@@ -10,7 +10,7 @@ function PopupWithForm(props) {
                         {props.children}
                         <button className="popup__button popup__button_edit-profile popup__button_active"
                                 type="submit"
-                                value="Сохранить">Сохранить
+                                value="Сохранить">{props.button}
                         </button>
                     </form>
                 </div>
