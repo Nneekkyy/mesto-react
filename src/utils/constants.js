@@ -8,9 +8,6 @@ export const validationConfig = {
     buttonInvalidClass: 'popup__button_inactive',
 };
 
-//кнопка esc
-export const ESC_KEYCODE = 27;
-
 //идентификация для Api
 
 const options = {
