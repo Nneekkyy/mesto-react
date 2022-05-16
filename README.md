@@ -1,7 +1,7 @@
 <h1 align="center">Проектная работа 5 "Место React"</h1>
 
 ## Ссылка на Github Pages
-https://barrrsss.github.io/mesto-react
+https://nneekkyy.github.io/mesto-react
 
 ## О проекте
 
